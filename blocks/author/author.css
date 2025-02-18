@@ -1,0 +1,31 @@
+
+.author-details-container {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 1rem; /* Space between avatar and info */
+  padding: 1rem; /* Add some padding around the block */
+  border: 1px solid #ccc; /* Optional border */
+}
+
+.author-avatar {
+  width: 50px; /* Adjust avatar size */
+  height: 50px;
+  border-radius: 50%; /* Make avatar circular */
+  object-fit: cover; /* Ensure image covers the area */
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column; /* Stack name and title vertically */
+}
+
+.author-name {
+  margin: 0; /* Remove default margins */
+  font-weight: bold;
+}
+
+.author-title {
+  margin: 0; /* Remove default margins */
+  font-size: smaller;
+  color: #777; /* Slightly darker color */
+}
