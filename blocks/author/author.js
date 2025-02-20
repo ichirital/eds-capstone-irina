@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   const name = block.querySelector('div:nth-child(1) > p')?.textContent.trim(); // Get name from first div
   const avatarSrc = block.querySelector('div:nth-child(2) > div > picture > img')?.src; // Get avatar src
   const title = block.querySelector('div:nth-child(3)')?.textContent.trim(); // Get title from third div
