@@ -5,8 +5,8 @@ export default function decorate(block) {
   const title = block.querySelector('div:nth-child(3)')?.textContent.trim(); // Get title from third div
 
   if (!name || !avatarSrc || !title) {
-    console.error("Author details block is missing required content (name, avatar, or title).");
-    block.innerHTML = "<p>Missing author details.</p>"; // Simple error message
+    console.error('Author details block is missing required content (name, avatar, or title).');
+    block.innerHTML = '<p>Missing author details.</p>'; // Simple error message
     return;
   }
 
