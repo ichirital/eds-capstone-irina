@@ -3,7 +3,7 @@
 }
 
 .social-links-container {
-  /* display: flex; */
+  display: flex;
   gap: 1rem; /* Space between links */
 }
 

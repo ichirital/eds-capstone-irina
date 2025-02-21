@@ -22,6 +22,7 @@
 .author-name {
   margin: 0; /* Remove default margins */
   font-weight: bold;
+  /* flex-grow: 1; */
 }
 
 .author-title {
