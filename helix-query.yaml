@@ -1,0 +1,22 @@
+version: 1
+
+queries:
+  magazine-articles:
+    query: |
+      {
+        entries(
+          path: "/en/magazine/"
+          filter: {
+            and: [
+              { property: "template", value: "article" } 
+            ]
+          }
+        ) {
+          path
+          title
+          description
+          # ... other properties as needed ...
+        }
+      }
+    # cache the results for 5 mins
+    cache: 300
