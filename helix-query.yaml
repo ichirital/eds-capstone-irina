@@ -5,7 +5,7 @@ indices:
       - /us/en/magazine/**
     exclude:
       - ‘**/fragments/**’
-    target: /aem/articles-index.json
+    target: /query-index.json
     properties:
       template:
         select: head > meta[name=“template”]
