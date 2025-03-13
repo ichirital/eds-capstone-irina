@@ -1,22 +1,24 @@
 version: 1
-
-queries:
-  magazine-articles:
-    query: |
-      {
-        entries(
-          path: "/us/en/magazine/"
-          filter: {
-            and: [
-              { property: "template", value: "article" } 
-            ]
-          }
-        ) {
-          path
-          title
-          description
-          # ... other properties as needed ...
-        }
-      }
-    # cache the results for 5 mins
-    cache: 300
+indices:
+  default:
+    include:
+      - /us/en/magazine/**
+    exclude:
+      - ‘**/fragments/**’
+    target: /aem/articles-index.json
+    properties:
+      template:
+        select: head > meta[name=“template”]
+        value: attribute(el, “content”)
+      title:
+        select: head > meta[property=“og:title”]
+        value: attribute(el, “content”)
+      author:
+        select: head > meta[name=“author”]
+        value: attribute(el, “content”)
+      image:
+        select: head > meta[property=“og:image”]
+        value: attribute(el, “content”)
+      lastModified:
+        select: head > meta[property=“article:modified_time”]
+        value: parseTimestamp(attribute(el, “content”))
