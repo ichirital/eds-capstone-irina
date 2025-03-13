@@ -7,7 +7,7 @@ export default async function decorate(block) {
     // Fetch the index.json which contains all pages
     const resp = await fetch('/query-index.json');
     if (!resp.ok) {
-      throw new Error(`Failed to fetch query-index.json: ${resp.status}`);
+      throw new Error(`Failed to fetch test query-index.json: ${resp.status}`);
     }
     const json = await resp.json();
 
