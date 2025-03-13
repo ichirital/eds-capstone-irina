@@ -5,7 +5,7 @@ queries:
     query: |
       {
         entries(
-          path: "/en/magazine/"
+          path: "/us/en/magazine/"
           filter: {
             and: [
               { property: "template", value: "article" } 
