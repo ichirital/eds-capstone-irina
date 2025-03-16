@@ -32,6 +32,17 @@ export default async function decorate(block) {
       const link = document.createElement('a');
       link.href = article.path;
       
+      // Add image thumbnail
+      if (article.image) {
+        const imageWrapper = document.createElement('div');
+        imageWrapper.classList.add('article-image');
+        const img = document.createElement('img');
+        img.src = article.image;
+        img.alt = article.title || 'Article thumbnail';
+        imageWrapper.appendChild(img);
+        link.appendChild(imageWrapper);
+      }
+
       const title = document.createElement('h3');
       title.textContent = article.title || 'Untitled';
       link.appendChild(title);
