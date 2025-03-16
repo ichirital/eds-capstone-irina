@@ -14,7 +14,7 @@ export default async function decorate(block) {
     // Filter for magazine articles
     const magazineArticles = json.data.filter((page) => {
       const path = page.path || '';
-      return path.startsWith('/magazine/') && !path.endsWith('/magazine/');
+      return path.startsWith('/us/en/magazine/') && !path.endsWith('/us/en/magazine/');
     });
 
     // Sort articles by date if available
